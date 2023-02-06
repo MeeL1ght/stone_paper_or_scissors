@@ -1,0 +1,40 @@
+---------------------------------
+ Juego de Piedra, Papel o Tijera
+  (Stone, Paper or Scissors)
+---------------------------------
+
+El juego clásico de piedra, papel o tijera consiste
+en elegir alguna de esas tres opciones. En una partida
+no solo puede haber un ganador y un perdero, también
+puede quedar en empate.
+
+Ahora procederé a explicar, el cómo ganar una partida.
+Para ganar una partida debemos conocer primero cuál
+opción le gana a otra y deseo representarlo en una tabla
+creada por acá:
+
+|--------------------------------|
+|              TABLA             |
+|--------------------------------|
+| Option 1 | Option 2 |   Win    |
+|--------------------------------|
+|    ✊    |    🤚    |    🤚     |
+|    ✊    |    ✌     |    ✊    |
+|    ✊    |    ✊     |    ❌   |
+|--------------------------------|
+|    🤚    |    ✊     |    🤚   |
+|    🤚    |    ✌     |     ✌   |
+|    🤚    |    🤚     |    ❌   |
+|--------------------------------|
+|    ✌    |    ✊      |    ✊   |
+|    ✌    |    🤚      |    ✌   |
+|    ✌    |    ✌      |    ❌   |
+|--------------------------------|
+
+Ya una vez hayamos tenido claro cómo ganar
+una partida de Piedra, Papel o Tijera, debemos
+de conocer un poco más sobre el juego.
+
+Al momento de iniciar el juego en la terminal,
+aparecerá un menú de opciones, lo cual el usuario
+podrá elegir entre las que estén disponibles.

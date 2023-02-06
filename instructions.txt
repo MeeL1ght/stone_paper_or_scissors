@@ -1,0 +1,11 @@
+Desde la carpeta "commands", escribe
+en tu terminal:
+
+Compilar:
+-> build.bat
+
+Ejecutar:
+-> exec.bat
+
+Compilar y ejecutar:
+-> run.bat

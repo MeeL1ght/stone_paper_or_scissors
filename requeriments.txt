@@ -1,0 +1,7 @@
+(*) Install:
+----------------------------
+   MingGW-w64 | Compiler
+----------------------------
+Link: https://www.mingw-w64.org/
+
+On the way......
