@@ -142,6 +142,7 @@ namespace StringUtils {
     const unsigned short LENGTH_OF_INPUT = input.size();
     const unsigned int   MAX_VALUE       = 9;
 
+
     if (LENGTH_OF_INPUT == 0)             return false;
     else if (LENGTH_OF_INPUT > MAX_VALUE) return false;
 
