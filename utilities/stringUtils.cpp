@@ -140,7 +140,7 @@ namespace StringUtils {
   */
   bool isValidIntNumber(std::string input) {
     const unsigned short LENGTH_OF_INPUT = input.size();
-    const unsigned int   MAX_VALUE       = 2147483647;
+    const unsigned int   MAX_VALUE       = 10;
 
     if (LENGTH_OF_INPUT == 0)             return false;
     else if (LENGTH_OF_INPUT > MAX_VALUE) return false;
