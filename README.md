@@ -1,3 +1,3 @@
-# Stone Paper Or Scissors
+# Stone, Paper Or Scissors
 
 ## CLI App - [practice]

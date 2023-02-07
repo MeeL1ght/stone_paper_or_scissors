@@ -14,7 +14,7 @@
   @return bool
 */
 bool isNumber(const char letter) {
-  const char NON_NUMERIC_CHARACTERS[59] = {
+  const char NON_NUMERIC_CHARACTERS[] = {
     // letters
     'a', 'b', 'c', 'd', 'e',    'f',
     'e', 'f', 'g', 'h', 'i',    'j',
@@ -26,7 +26,7 @@ bool isNumber(const char letter) {
     ']', '+',  '*', '/', '|', '!',
     '"', '\'', '#', '$', '%', '\\',
     '(', ')',  '=', '?', ' ', ';',
-    ':', '_',  '<', '>', '^'
+    ':', '_',  '<', '>', '^', '@'
   };
 
   unsigned short index = 0;
@@ -43,6 +43,30 @@ bool isNumber(const char letter) {
 
     index++;
   }
+
+  return true;
+}
+
+/**
+  @brief Valida si la letra a recibir
+  coincide con las no permitidas del
+  arreglo de caracteres.
+
+  @param letter const char
+  @return bool
+*/
+bool isUsername(const char letter) {
+  const char NON_NUMERIC_CHARACTERS[] = {
+    // special characters
+    ',',  '-', '{', '}', '[', ']',
+    '+',  '*', '/', '|', '!', '"',
+    '\'', '#', '$', '%', '\\', '(',
+    ')',  '=', '?', ';', ':', '<',
+    '>', '^', '~', '@', ' '
+  };
+
+  for (const char invalidLetter : NON_NUMERIC_CHARACTERS)
+    if (letter == invalidLetter) return false;
 
   return true;
 }
@@ -72,19 +96,19 @@ namespace StringUtils {
     @brief Convierte el valor de tipo
     std::string a bool.
 
-    @param word std::string
+    @param input std::string
     @return bool
   */
-  bool toBool(std::string word) {
+  bool toBool(std::string input) {
     std::transform(
-      word.begin(),
-      word.end(),
-      word.begin(),
+      input.begin(),
+      input.end(),
+      input.begin(),
       ::tolower
     );
 
     bool flag;
-    std::istringstream is(word);
+    std::istringstream is(input);
 
     is >> std::boolalpha >> flag;
 
@@ -148,6 +172,33 @@ namespace StringUtils {
 
     for (const char letter : input)
       if (!isNumber(letter)) return false;
+
+    return true;
+  }
+
+  /**
+    @brief Determina si el valor ingresado
+    de la entrada es un nombre de usuario válido.
+
+    @param input std::string
+    @return bool
+  */
+  bool isValidUsername(std::string input) {
+    const unsigned short LENGTH_OF_INPUT = input.size();
+    const unsigned int   MAX_VALUE       = 20;
+
+    if (
+      LENGTH_OF_INPUT >= 0 &&
+      LENGTH_OF_INPUT <= 2
+    ) {
+      return false;
+    }
+
+    else if (LENGTH_OF_INPUT > MAX_VALUE)
+      return false;
+
+    for (const char letter : input)
+      if (!isUsername(letter)) return false;
 
     return true;
   }

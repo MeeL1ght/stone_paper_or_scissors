@@ -28,17 +28,17 @@ namespace Base {
 
   std::pair<std::string, std::string> propWins(
     "wins",
-    "vector<int>"
+    "vector<unsigned int>"
   );
 
   std::pair<std::string, std::string> propTied(
     "tied",
-    "vector<int>"
+    "vector<unsigned int>"
   );
 
   std::pair<std::string, std::string> propLosses(
     "losses",
-    "vector<int>"
+    "vector<unsigned int>"
   );
 
   // Define Player model
