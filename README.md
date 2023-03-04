@@ -1,3 +1,3 @@
 # Stone, Paper Or Scissors
 
-## CLI App - [practice]
+## Stone, Paper and Scissors 🎮 Game made for practical purposes in C ++
